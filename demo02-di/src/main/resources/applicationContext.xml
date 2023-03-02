@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+		bean标签：表示配置bean
+    	id属性：表示给bean起名字
+    	class属性：表示给bean定义类型
+	-->
+    <bean id="user" class="spring.User">
+        <property name="name" value="JayZhou"></property>
+        <property name="age" value="38"></property>
+    </bean>
+    <bean id="userDao" class="spring.UserDaoImpl">
+        <!-- 方式1：按照参数名称 这里的user1 和有参构造函数的参数名一致 -->
+        <constructor-arg name="foo" value="123"></constructor-arg>
+        <constructor-arg name="user1" ref="user"></constructor-arg>
+
+        <!-- 方式2：按照参数顺序 -->
+        <!-- <constructor-arg index="0" ref="user"></constructor-arg> -->
+        <!-- <constructor-arg index="1" value="456"></constructor-arg> -->
+
+        <!-- 方式3：按照参数类型 -->
+        <!-- <constructor-arg type="int" value="123456"></constructor-arg> -->
+        <!-- <constructor-arg type="spring.User" ref="user"></constructor-arg> -->
+    </bean>
+    <bean id="userService" class="spring.UserServiceImpl">
+        <!--配置server与dao的关系
+			property标签：表示配置当前bean的属性
+        	name属性：表示配置哪一个具体的属性 这里的name取值是setter方法，setUserDao1后的UserDao1的小驼峰形式
+        	ref属性：表示参照哪一个bean
+		-->
+        <!-- 在添加setter实现以后 name的值才会在idea中自动读取出来 -->
+        <property name="userDao1" ref="userDao"></property>
+    </bean>
+</beans>

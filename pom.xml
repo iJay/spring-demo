@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.leohan</groupId>
+    <artifactId>spring-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>demo00-init</module>
+        <module>demo01-ioc</module>
+        <module>demo02-di</module>
+        <module>demo03-basic-option</module>
+        <module>demo04-bean-instance</module>
+        <module>demo05-autowire</module>
+        <module>demo06-collection-di</module>
+        <module>demo07-load-properties</module>
+        <module>demo08-annotation</module>
+        <module>demo09-pure-annotation</module>
+    </modules>
+
+</project>

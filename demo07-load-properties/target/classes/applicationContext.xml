@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- system-properties-mode="NEVER" 不使用系统属性 因为系统属性的优先级比我们属性文件中的高，替换了我们的配置属性和值 -->
+    <!-- <context:property-placeholder location="jdbc.properties" system-properties-mode="NEVER"/> -->
+    <!-- 加载properties文件标准格式 -->
+    <context:property-placeholder location="classpath*:*.properties" system-properties-mode="NEVER"/>
+
+    <!-- 多个配置文件 空格隔开 -->
+    <!-- <context:property-placeholder location="jdbc.properties other.properties" system-properties-mode="NEVER"/> -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="name" value="${jdbc.driver}"></property>
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+</beans>

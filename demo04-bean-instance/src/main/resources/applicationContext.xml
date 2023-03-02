@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+		bean标签：表示配置bean
+    	id属性：表示给bean起名字
+    	class属性：表示给bean定义类型
+	-->
+    <bean id="user" name="user1 userEntity userPojo" class="spring.User">
+        <property name="name" value="JayZhou"></property>
+        <property name="age" value="38"></property>
+    </bean>
+    <bean id="userDao" class="spring.example.factory.UserDaoFactory" factory-method="getUserDao">
+        <!-- 在添加setter实现以后 name的值才会在idea中自动读取出来 -->
+        <property name="user" ref="user"></property>
+    </bean>
+
+    <bean id="userServiceFactory" class="spring.example.factory.UserServiceFactory"></bean>
+
+    <!-- scope: singleton、prototype 默认singleton 还有request、session、application、 websocket等模式 -->
+    <bean id="userService" factory-bean="userServiceFactory" factory-method="getUserService" init-method="init" destroy-method="destory">
+        <!--配置server与dao的关系
+			property标签：表示配置当前bean的属性
+        	name属性：表示配置哪一个具体的属性 这里的name取值是setter方法，setUserDao1后的UserDao1的小驼峰形式
+        	ref属性：表示参照哪一个bean
+		-->
+        <property name="userDao1" ref="userDao"></property>
+    </bean>
+</beans>
