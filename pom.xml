@@ -20,6 +20,7 @@
         <module>demo08-annotation</module>
         <module>demo09-pure-annotation</module>
         <module>demo10-with-mybatis</module>
+        <module>demo11-aop</module>
     </modules>
 
 </project>

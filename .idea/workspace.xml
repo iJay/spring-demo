@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c58d183e-7b96-4dbf-bc0e-3edee5a9421a" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo10-with-mybatis/demo10-with-mybatis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo10-with-mybatis/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo10-with-mybatis/src/main/java/spring/example/config/JdbcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo10-with-mybatis/src/main/java/spring/example/config/MybatisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo10-with-mybatis/src/main/java/spring/example/config/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo10-with-mybatis/src/main/java/spring/example/dao/AccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo10-with-mybatis/src/main/java/spring/example/entity/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo10-with-mybatis/src/main/java/spring/example/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo10-with-mybatis/src/main/java/spring/example/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo10-with-mybatis/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo10-with-mybatis/src/test/java/ApplicationTest.java" afterDir="false" />
+    <list default="true" id="c58d183e-7b96-4dbf-bc0e-3edee5a9421a" name="默认变更列表" comment="spring 整合 mybatis 和 junit">
+      <change afterPath="$PROJECT_DIR$/demo11-aop/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo11-aop/src/main/java/spring/example/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo11-aop/src/main/java/spring/example/dao/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo11-aop/src/main/java/spring/example/dao/impl/BookDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo11-aop/src/main/java/spring/example/utils/MyAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo11-aop/src/test/java/ApplicationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -96,21 +90,7 @@
       <recent name="spring.example.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApplicationTest.testQueryAll">
-    <configuration name="ApplicationTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ApplicationTest" />
-      <module name="demo10-with-mybatis" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo09Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Demo09Application" />
-      <module name="demo09-pure-annotation" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ApplicationTest.testAopPointCut2">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -129,6 +109,26 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ApplicationTest" />
       <option name="METHOD_NAME" value="testAddAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTest.testAopPointCut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo11-aop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ApplicationTest" />
+      <option name="METHOD_NAME" value="testAopPointCut" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTest.testAopPointCut2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo11-aop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ApplicationTest" />
+      <option name="METHOD_NAME" value="testAopPointCut2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApplicationTest.testAopPointCut2" />
+        <item itemvalue="JUnit.ApplicationTest.testAopPointCut" />
         <item itemvalue="JUnit.ApplicationTest.testQueryAll" />
         <item itemvalue="JUnit.ApplicationTest.testAddAccount" />
         <item itemvalue="JUnit.ApplicationTest.testFindById" />
-        <item itemvalue="应用程序.ApplicationTest (1)" />
-        <item itemvalue="应用程序.Demo09Application" />
       </list>
     </recent_temporary>
   </component>
@@ -189,8 +189,23 @@
       <workItem from="1677717827421" duration="6674000" />
       <workItem from="1677724619559" duration="17670000" />
       <workItem from="1677803237962" duration="3698000" />
-      <workItem from="1677806981837" duration="3168000" />
+      <workItem from="1677806981837" duration="6079000" />
     </task>
+    <task id="LOCAL-00001" summary="spring 整合 mybatis 和 junit">
+      <created>1677810246127</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677810246127</updated>
+    </task>
+    <task id="LOCAL-00002" summary="spring 整合 mybatis 和 junit">
+      <created>1677810265856</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677810265856</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,5 +225,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="spring 整合 mybatis 和 junit" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring 整合 mybatis 和 junit" />
   </component>
 </project>

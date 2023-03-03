@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo01-ioc" />
         <module name="demo03-basic-option" />
+        <module name="demo11-aop" />
         <module name="demo02-di" />
         <module name="demo04-bean-instance" />
         <module name="demo07-load-properties" />
