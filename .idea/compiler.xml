@@ -11,16 +11,12 @@
         <module name="demo02-di" />
         <module name="demo04-bean-instance" />
         <module name="demo07-load-properties" />
+        <module name="demo05-autowire" />
+        <module name="demo10-with-mybatis" />
         <module name="demo00-init" />
         <module name="demo09-pure-annotation" />
         <module name="demo06-collection-di" />
         <module name="demo08-annotation" />
-      </profile>
-      <profile name="Annotation profile for spring-demo" enabled="true">
-        <sourceOutputDir name="../demo05-autowrie/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../demo05-autowrie/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="demo05-autowire" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

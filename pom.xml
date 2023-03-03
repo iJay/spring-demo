@@ -19,6 +19,7 @@
         <module>demo07-load-properties</module>
         <module>demo08-annotation</module>
         <module>demo09-pure-annotation</module>
+        <module>demo10-with-mybatis</module>
     </modules>
 
 </project>
