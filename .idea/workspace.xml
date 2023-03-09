@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c58d183e-7b96-4dbf-bc0e-3edee5a9421a" name="默认变更列表" comment="aop">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c58d183e-7b96-4dbf-bc0e-3edee5a9421a" name="默认变更列表" comment="aop" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +179,7 @@
       <workItem from="1677717827421" duration="6674000" />
       <workItem from="1677724619559" duration="17670000" />
       <workItem from="1677803237962" duration="3698000" />
-      <workItem from="1677806981837" duration="7008000" />
+      <workItem from="1677806981837" duration="7301000" />
     </task>
     <task id="LOCAL-00001" summary="spring 整合 mybatis 和 junit">
       <created>1677810246127</created>
